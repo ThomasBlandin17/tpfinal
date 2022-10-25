@@ -1,11 +1,8 @@
-<!-- ICI DOIT APPARAITRE LE CODE PHP CONTENANT
-    LA LIAISON AVEC LA BASE DE DONNEES
-    LA DECLARATION DES VARIABLES
-    ET LA GESTION DES ERREURS
--->
-<?php include 'db.php'; ?>
+<?php 
+include 'db.php';
+ ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -14,9 +11,13 @@
 	<title>Home</title>
 </head>
 <body background="">
-  <!--alert messages start-->
-  <?php echo $alert; ?>
-  <!--alert messages end-->
+<!--alert messages start-->
+<?php 
+if(isset($_POST['enregistrer'])){
+echo $alert; 
+}
+?>
+<!--alert messages end-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">société general</a>
@@ -35,7 +36,7 @@
     </div>
   </div>
 </nav>
-	<form action="" method="post">
+	<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
        <div class="container-fluid">
        	  <div class="p-4  mx-auto shadow rounded" style="width:100%; max-width:340px; margin-top: 50px;">
       
@@ -54,5 +55,10 @@
 	   </form>
 	   <script src="assets/bootstrap.bundle.min.js"></script>
     <script src="assets/bootstrap.min.js"></script>
+    <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
 </body>
 </html> 
