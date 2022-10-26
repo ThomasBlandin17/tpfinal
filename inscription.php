@@ -36,7 +36,7 @@ echo $alert;
     </div>
   </div>
 </nav>
-	<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+	<form action="" method="POST">
        <div class="container-fluid">
        	  <div class="p-4  mx-auto shadow rounded" style="width:100%; max-width:340px; margin-top: 50px;">
       
